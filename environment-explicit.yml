@@ -1,0 +1,38 @@
+# This environment lists all the explicit dependencies. 
+# Note that it is NOT directly used by binder.
+# You should use it to generate the frozen environment.yml with:
+# 
+# $ conda env export > environment.yml
+#
+# Then, at the bottom of the file, change the part that looks like
+#
+# - pip:
+#   - mdsapt==...
+#
+# to 
+#
+# - pip:
+#   - git+https://github.com/ALescoulie/MDSAPT.git@1.0.0
+
+
+name: mdsaptdemo
+channels:
+  - psi4
+  - conda-forge
+  - defaults
+dependencies:
+  - mdanalysis>=2.0.0, <2.1
+  - nglview>=3.0.3, <3.1
+  - numpy>=1, <2
+  - openmm=7.5.1
+  - pandas
+  - pdbfixer
+  - psi4=1.4+9485035
+  - pytest-cov
+  - pyyaml
+  - rdkit>=2020.09.3
+
+  # TODO use the conda-distributed MDSAPT
+  - pip
+  - pip:
+    - git+https://github.com/ALescoulie/MDSAPT.git@1.0.0
