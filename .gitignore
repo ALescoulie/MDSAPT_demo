@@ -1,1 +1,4 @@
 /mdsapt.log
+/.ipynb_checkpoints
+timer.dat
+*.pdb
