@@ -12,8 +12,8 @@ trajectory_settings:
   stop: 98
   step: 1
 system_settings:
-  ncpus: 12
-  memory: 12GB
+  ncpus: 32
+  memory: 80GB
   time: '24:00:00'
 opt_settings:
   pH: 7
