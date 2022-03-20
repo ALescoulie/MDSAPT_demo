@@ -12,7 +12,7 @@
 # to 
 #
 # - pip:
-#   - git+https://github.com/ALescoulie/MDSAPT.git@1.0.0
+#   - git+https://github.com/calpolyccg/MDSAPT.git@v1.1.0
 
 
 name: mdsaptdemo
@@ -21,6 +21,7 @@ channels:
   - conda-forge
   - defaults
 dependencies:
+  - jupyter
   - mdanalysis>=2.0.0, <2.1
   - nglview>=3.0.3, <3.1
   - numpy>=1, <2
@@ -35,4 +36,4 @@ dependencies:
   # TODO use the conda-distributed MDSAPT
   - pip
   - pip:
-    - git+https://github.com/ALescoulie/MDSAPT.git@1.0.0
+    - git+https://github.com/calpolyccg/MDSAPT.git@v1.1.0
