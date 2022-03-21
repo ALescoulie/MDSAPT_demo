@@ -2,3 +2,6 @@
 /.ipynb_checkpoints
 timer.dat
 *.pdb
+*.out
+*.clean
+
