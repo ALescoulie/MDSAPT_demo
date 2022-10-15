@@ -12,7 +12,7 @@
 # to 
 #
 # - pip:
-#   - git+https://github.com/calpolyccg/MDSAPT.git@v1.1.0
+#   - git+https://github.com/calpolyccg/MDSAPT.git@v2.0.0
 
 
 name: mdsaptdemo
@@ -21,19 +21,26 @@ channels:
   - conda-forge
   - defaults
 dependencies:
-  - jupyter
-  - mdanalysis>=2.0.0, <2.1
-  - nglview>=3.0.3, <3.1
-  - numpy>=1, <2
-  - openmm=7.5.1
+  # This must be specified FIRST to avoid packaging errors.
+  - psi4>=1.6.1,<1.7
+
+  - mdanalysis>=2.2.0,<2.3
+  - click
+  - numpy
+  - openmm
   - pandas
   - pdbfixer
-  - psi4=1.4+9485035
+  - pytest
+  - pydantic
   - pytest-cov
   - pyyaml
-  - rdkit>=2020.09.3
+  - rdkit
+
+  - nglview
+  - jupyter
+  - matplotlib
 
   # TODO use the conda-distributed MDSAPT
   - pip
   - pip:
-    - git+https://github.com/calpolyccg/MDSAPT.git@v1.1.0
+    - git+https://github.com/calpolyccg/MDSAPT.git@v2.0.0

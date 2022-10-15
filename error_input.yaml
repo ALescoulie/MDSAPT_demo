@@ -1,25 +1,31 @@
-topology_path: testtop.psf
-trajectory_paths:
-  - testtraj.dcd
-selection_resid_num:
-  - 11
-  - 199
-int_pairs:
-  # Place pair of  selections defined above in a list of lists
-  - [11, 199]
-trajectory_settings:
-  start: 78
-  stop: 120
-  step: 1
-system_settings:
-  ncpus: 12
-  memory: 12GB
-  time: '24:00:00'
-opt_settings:
-  pH: 7
-sapt_settings:
-  method: 'sapt0'
-  basis: 'jun-cc-pvdz'
+psi4:
+  method: "sapt0"
+  basis: "jun-cc-pvdz"
   settings:
-    reference: 'rhf'
-  save_psi4_output: true
+    reference: "rhf"
+  save_output: true
+simulation:
+  ph: 7.0
+  charge_guesser: "standard"
+  # charge_guesser: 'rdkit'  # to use rdkit. Make sure it is installed first.
+system_limits:
+  ncpus: 32
+  memory: "80GB"
+analysis:
+  ### This section is for running TrajectorySAPT. To run other types of analyses, see below.
+  type: "trajectory"
+
+  topology: testtop.psf
+  trajectories:
+    - testtraj.dcd
+  pairs:
+    # Place pair of  selections defined above in a list of lists
+    - [109, 196]
+    - [197, 199]
+    - [208, 200]
+    - [156, 44]
+    - [84, 13]
+  frames:
+    start: 78
+    stop: 120
+  output: "output.csv"
