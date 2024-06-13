@@ -21,28 +21,7 @@ channels:
   - conda-forge
   - defaults
 dependencies:
-  - python>=3.9,<3.10.0a0
-
-  # This must be specified FIRST to avoid packaging errors.
-  - psi4>=1.6.1,<1.7
-
-  - mdanalysis>=2.2.0,<2.3
-  - click
-  - numpy
-  - openmm
-  - pandas
-  - pdbfixer
-  - pytest
-  - pydantic
-  - pytest-cov
-  - pyyaml
-  - rdkit
-
+  - python>=3.9,<=3.11
+  - mdsapt
   - nglview
-  - jupyter
-  - matplotlib
 
-  # TODO use the conda-distributed MDSAPT
-  - pip
-  - pip:
-    - git+https://github.com/calpolyccg/MDSAPT.git@v2.0.0
